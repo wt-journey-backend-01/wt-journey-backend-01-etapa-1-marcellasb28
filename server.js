@@ -87,6 +87,34 @@ app.post('/contato', (req, res) => {
     // res.status(200);
 });
 
+// rota LANCHES
+app.get('/api/lanches', (req, res) => {
+    // Array de objetos JavaScript simulando os dados dos lanches
+    // ESTES SÃO OS DADOS QUE A API VAI "ENVIAR"
+    const lanches = [
+        {
+            "id": 1,
+            "nome": "DevBurger Clássico",
+            "ingredientes": "Pão brioche, Carne 150g, Queijo cheddar, Alface americana, Tomate fresco, Molho especial"
+        },
+        {
+            "id": 2,
+            "nome": "Burger de Bacon",
+            "ingredientes": "Pão australiano, Carne 180g, Queijo prato, Bacon crocante, Cebola caramelizada, Molho barbecue"
+        },
+        {
+            "id": 3,
+            "nome": "Commit Veggie",
+            "ingredientes": "Pão integral, Burger de grão de bico, Queijo vegano, Rúcula, Tomate seco, Maionese de ervas"
+        }
+    ];
+
+    // res.json(lanches) pega este array de objetos JavaScript e
+    // o CONVERTE AUTOMATICAMENTE para uma string JSON,
+    // e então envia essa string como a resposta HTTP para o cliente.
+    res.json(lanches);
+});
+
 app.listen(PORT, () => {
     console.log(`Servidor da DevBurger rodando em localhost:${PORT}`);
 });
