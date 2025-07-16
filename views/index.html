@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css"/> 
+    <title>DevBurguer</title>
+</head>
+<body>
+    <h1>Bem-vindo ao DevBurguer!</h1>
+    <p>Esta é a página inicial do nosso site de pedidos de hambúrgueres.</p>
+    <p>Explore nossas opções deliciosas e faça seu pedido agora!</p>
+
+    <div id ="cardapio">
+        <img src="images/cardapio.png" alt="Imagem de um cardápio" />
+    </div>
+
+    <div id="formulario">
+
+        <h2>Faça sua sugestão:</h2>
+        <form action="/sugestao" method="GET">
+
+            <label for="nome">Insira seu nome:</label>
+            <input type="text" id="nome" name="nome" required />
+
+            <label for="nome">Insira o nome do hambúrguer:</label>
+            <input type="text" id="nomehamburguer" name="nomehamburguer" required />
+
+            <label for="nome">Insira os ingredientes do hambúrguer:</label>
+            <input type="text" id="ingredientes" name="ingredientes" required />
+            
+
+            <button type="submit">Enviar Sugestão</button>
+
+        </form> 
+
+    </div>
+
+    <p> <a href="/contato">Entre em contato conosco!</a> </p>
+    
+</body>
+</html>
